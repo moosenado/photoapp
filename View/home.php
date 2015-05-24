@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<?php require('header.php'); ?>
-		<main>
-		<h1>Welcome to photoApp</h1>
+	
+	<main>
+	<h1>Welcome to photoApp</h1>
 		
 	<form action = "../controller/index.php" method = "post">
 		<fieldset>
