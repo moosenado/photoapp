@@ -7,7 +7,6 @@
 	</head>
 
 	<body>
-		<div id = "page">
 			<div id "header">
 			<h1>Pictures</h1>
 			</div>
