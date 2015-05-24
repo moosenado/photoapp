@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-	<?php require('../view/header.php'); ?>
+	<?php require('header.php'); ?>
 		<main>
 		<h1>Welcome to photoApp</h1>
 		
@@ -8,11 +8,11 @@
 		<fieldset>
 		<legend>Log In</legend>
 			<label>User Name</label>
-			<input type = "text" name = "username">
+			<input type = "text" name = 'username'>
 			<br>
 
 			<label>Password</label>
-			<input type = "password" name = "pasword">
+			<input type = "password" name = "password">
 			<br>
 
 			<input type='hidden' name='action' value='login'>

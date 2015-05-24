@@ -12,6 +12,7 @@ if($action =='home'){
 	include('../view/home.php');
 
 } elseif ($action=='login') {
+	$userName = $_POST['username'];
 	include('../view/main.php');
 
 } else if($action=='register'){

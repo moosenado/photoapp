@@ -1,6 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-	<body>
-		<h1> thank you for logging in! </h1>
-	</body>
-</hmtl>
+<?php require ('header.php'); ?>
+
+<h1>Welcome <?php echo $userName ?></h1>
+
+<?php require ('footer.php'); ?>
