@@ -59,6 +59,7 @@
 			<input type = "Submit" value = "Register">
 		</fieldset>
 	</form>
+	
 	<?php require('footer.php'); ?>
 	</main>
 
