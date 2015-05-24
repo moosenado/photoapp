@@ -23,8 +23,10 @@ if($action =='home'){
 		$email = $_POST['email'];
 		$date = date('y-m-d');
 
-		if($password==$passwordC){
-			echo "password does not match";
+		if($password!==$passwordC){
+			$error_message =  "password does not match";
+			include('../view/home.php');
+			exit();
 		} else{
 			add_user($firstName, $lastName, $userName, $password, $email, $date);
 			include('../view/main.php');

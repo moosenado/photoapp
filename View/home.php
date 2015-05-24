@@ -59,7 +59,12 @@
 			<input type = "Submit" value = "Register">
 		</fieldset>
 	</form>
-	
+
+	<?php
+		if(!empty($error_message)){?>
+			<p class="error"><?php echo $error_message; ?></p>
+	<?php } ?>
+
 	<?php require('footer.php'); ?>
 	</main>
 
