@@ -5,7 +5,7 @@ require('../Models/users_db.php');
 if(isset($_POST['action'])){
 	$action = $_POST['action'];
 } else{
-	$action = 'register';
+	$action = 'home';
 }
 
 if($action =='home'){
