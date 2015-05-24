@@ -1,11 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>photoApp</title>
-		<link rel="stylesheet" type="text/css" href="home.css">
-	</head>
-
-	<body>
+	<?php require('../view/header.php'); ?>
 		<main>
 		<h1>Welcome to photoApp</h1>
 		
