@@ -19,13 +19,19 @@ if($action =='home'){
 		$lastName = $_POST['lastName'];
 		$userName = $_POST['userName'];
 		$password = $_POST['password'];
+		$passwordC = $_POST['passwordC'];
 		$email = $_POST['email'];
-
 		$date = date('y-m-d');
 
-		add_user($firstName, $lastName, $userName, $password, $email, $date);
-		include('../view/main.php');
+		if($password==$passwordC){
+			echo "password does not match";
+		} else{
+			add_user($firstName, $lastName, $userName, $password, $email, $date);
+			include('../view/main.php');
+		}
 
+		
+		
 }
 
 ?>

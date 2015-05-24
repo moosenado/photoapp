@@ -9,4 +9,9 @@ function add_user($firstName, $lastName, $userName, $password, $email, $date){
 	$db->exec($query);
 }
 
+function user_exists($userName, $password){
+	global $db;
+	
+}
+
 ?>
