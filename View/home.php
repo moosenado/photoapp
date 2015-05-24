@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Login or signup</title>
+		<title>photoApp</title>
 		<link rel="stylesheet" type="text/css" href="home.css">
 	</head>
 
