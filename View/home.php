@@ -9,7 +9,7 @@
 		<main>
 		<h1>Welcome to photoApp</h1>
 		
-	<form action = "../controller/index.php" method = "post" name = 'action' value = 'login'>
+	<form action = "../controller/index.php" method = "post">
 		<fieldset>
 		<legend>Log In</legend>
 			<label>User Name</label>
@@ -20,11 +20,13 @@
 			<input type = "password" name = "pasword">
 			<br>
 
+			<input type='hidden' name='action' value='login'>
+
 			<input type = "submit" value="Log In">
 		</fieldset>
 	</form>
 	<br>
-	<form action = "../controller/index.php" method = "post" name = 'action' value = 'register'>
+	<form action = "../controller/index.php" method = "post">
 		<fieldset>
 		<legend>Not a Member? Register!</legend>
 
@@ -51,6 +53,8 @@
 			<label>E-mail</label>
 			<input type = "text" name = "email">
 			<br>
+
+			<input type = "hidden" name='action' value = 'register'>
 
 			<input type = "Submit" value = "Register">
 		</fieldset>
