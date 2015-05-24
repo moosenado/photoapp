@@ -3,7 +3,7 @@
 <h1>Welcome <?php echo $userName ?>!</h1>
 <br>
 
-<form action='uploade.php' method='post' enctype= 'multipart/form-data'>
+<form action='../controller/index.php' method='post' enctype= 'multipart/form-data'>
 	<input type='file' name='file1'>
 	<br>
 	<input type='submit' value='upload'>
