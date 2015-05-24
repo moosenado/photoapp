@@ -8,6 +8,6 @@
 
 	<body>
 			<div id "header">
-			<h1>Pictures</h1>
+			<h1>PhotoApp</h1>
 			</div>
 	
