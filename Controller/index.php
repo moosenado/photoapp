@@ -26,7 +26,6 @@ if($action =='home'){
 		if($password!==$passwordC){
 			$error_message =  "password does not match";
 			include('../view/home.php');
-			exit();
 		} else{
 			add_user($firstName, $lastName, $userName, $password, $email, $date);
 			include('../view/main.php');
