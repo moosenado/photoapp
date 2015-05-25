@@ -13,7 +13,7 @@ if($action =='home'){
 
 } elseif ($action=='login') {
 	$userName = $_POST['username'];
-	include('../view/main.php');
+	header("location: ../view/main.php");
 
 } else if($action=='register'){
 		$firstName = $_POST['firstName'];
