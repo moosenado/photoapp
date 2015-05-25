@@ -12,8 +12,9 @@ if($action =='home'){
 	include('../view/home.php');
 
 } elseif ($action=='login') {
+	var_dump($_POST);
 	$userName = $_POST['username'];
-	header("location: ../view/main.php");
+	include("../view/main.php");
 
 } else if($action=='register'){
 		$firstName = $_POST['firstName'];
@@ -26,10 +27,10 @@ if($action =='home'){
 
 		if($password!==$passwordC){
 			$error_message =  "password does not match";
-			include('../view/home.php');
+			header("location: ../view/home.php");
 		} else{
 			add_user($firstName, $lastName, $userName, $password, $email, $date);
-			include('../view/main.php');
+			header("location: ../view/main.php");
 		}
 
 		

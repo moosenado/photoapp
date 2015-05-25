@@ -1,6 +1,6 @@
 <?php require ('header.php'); ?>
 
-<h1>Welcome <?php echo $username ?>!</h1>
+<h1>Welcome <?php echo $userName; ?>!</h1>
 <br>
 
 <form action='../controller/index.php' method='post' enctype= 'multipart/form-data'>
