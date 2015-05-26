@@ -4,12 +4,14 @@ require ('database.php');
 class users {
 
 	function add_user($firstName, $lastName, $uName, $pwd, $email, $date){
-	$database = new database();
-	$query = "INSERT INTO users
+		var_dump("hey");
+		exit();
+		$database = new database();
+		$query = "INSERT INTO users
 				(firstName, lastName, userName, password, email, createDate )
 			   VALUES
 			   	('$firstName', '$lastName', '$uName', '$pwd', '$email', '$date')";
-	$database->exec($query);
+		$database->exec($query);
 }
 
 	function validate_user($uName, $pwd){

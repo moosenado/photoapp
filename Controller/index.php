@@ -28,7 +28,7 @@ if($action =='home'){
 		$email = $_POST['email'];
 		$date = date('y-m-d');
 
-		if($password!==$passwordC){
+		if($pwd!==$pwdC){
 			$error_message =  "password does not match";
 			header("location: ../view/home.php");
 		} else{
