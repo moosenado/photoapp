@@ -13,7 +13,7 @@ if($action =='home'){
 
 } elseif ($action=='login') {
 	session_start();
-	$user = new user();
+	$user = new users();
 
 	if($_POST && !empty($_POST['username']) && !empty($_POST['password'])){
 		$response = $user->validate_user($_POST['username'], $_POST['password']);
@@ -22,9 +22,9 @@ if($action =='home'){
 } else if($action=='register'){
 		$firstName = $_POST['firstName'];
 		$lastName = $_POST['lastName'];
-		$userName = $_POST['userName'];
-		$password = $_POST['password'];
-		$passwordC = $_POST['passwordC'];
+		$uName = $_POST['userName'];
+		$pwd = $_POST['password'];
+		$pwdC = $_POST['passwordC'];
 		$email = $_POST['email'];
 		$date = date('y-m-d');
 
@@ -33,7 +33,7 @@ if($action =='home'){
 			header("location: ../view/home.php");
 		} else{
 			$user = new users();
-			$user->add_user($firstName, $lastName, $userName, $password, $email, $date);
+			$user->add_user($firstName, $lastName, $uName, $pwd, $email, $date);
 			header("location: ../view/main.php");
 		}
 

@@ -1,20 +1,20 @@
 <?php
-require 'database.php';
+require ('database.php');
 
 class users {
 
-	function add_user($firstName, $lastName, $userName, $password, $email, $date){
+	function add_user($firstName, $lastName, $uName, $pwd, $email, $date){
 	$database = new database();
 	$query = "INSERT INTO users
 				(firstName, lastName, userName, password, email, createDate )
 			   VALUES
-			   	('$firstName', '$lastName', '$userName', '$password', '$email', '$date')";
+			   	('$firstName', '$lastName', '$uName', '$pwd', '$email', '$date')";
 	$database->exec($query);
 }
 
-	function validate_user($username, $password){
-		$datebase = new database();
-		$ensure_user = $database->verify_username_pass($username, md5($password));
+	function validate_user($uName, $pwd){
+		$database = new database();
+		$ensure_user = $database->verify_username_pass($uName, md5($pwd));
 
 		if($ensure_user){
 			$_SESSION['status'] = 'authorised';
