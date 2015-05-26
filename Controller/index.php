@@ -1,5 +1,5 @@
 <?php
-require('../Models/database.php');
+
 require('../Models/users_db.php');
 
 if(isset($_POST['action'])){
