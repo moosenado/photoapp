@@ -12,9 +12,13 @@ if($action =='home'){
 	include('../view/home.php');
 
 } elseif ($action=='login') {
-	var_dump($_POST);
-	$userName = $_POST['username'];
-	include("../view/main.php");
+	session_start();
+	require_once('../models/users_db.php');
+	$user = new user();
+
+	if($_POST && !empty($_POST['username']) && !empty($_POST['password'])){
+		$response = $user->validate_user($_POST['username'], $_POST['password']);
+	}
 
 } else if($action=='register'){
 		$firstName = $_POST['firstName'];
@@ -29,7 +33,8 @@ if($action =='home'){
 			$error_message =  "password does not match";
 			header("location: ../view/home.php");
 		} else{
-			add_user($firstName, $lastName, $userName, $password, $email, $date);
+			$user = new user();
+			$user->add_user($firstName, $lastName, $userName, $password, $email, $date);
 			header("location: ../view/main.php");
 		}
 

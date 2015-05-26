@@ -1,15 +1,3 @@
-<?php
-session_start();
-require_once('../models/users_db.php');
-$user = new user();
-
-if($_POST && !empty($_POST['username']) && !empty($_POST['password'])){
-	$response = $user->validate_user($_POST['username'], $_POST['password']);
-
-}
-
-?>
-
 <!DOCTYPE HTML>
 <html>
 	<?php require('header.php'); ?>
