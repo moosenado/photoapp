@@ -10,20 +10,20 @@
 	class database {
 		private $db;
 
-		function__contruct(){
+		function __contruct(){
 			$this->db = new PDO($dsn, $username, $password);
 		}
 
 
 		function verify_username_pass($username, $password){
 		
-			$query = "SELECT * FROM users WHERE username = ? and password = ? LIMIT 1"
+			$query = "SELECT * FROM users WHERE username = ? and password = ? LIMIT 1";
 
 			if($stmt = $this->db->prepare($query)){
 				$stmt->bind_param('ss', $username, $password);
 				$stmt->execute();
 
-				if(stmt->fetch()){
+				if($stmt->fetch()){
 					$stmt->close();
 					return true;
 				}

@@ -1,5 +1,5 @@
 <?php
-require 'datebase.php';
+require 'database.php';
 
 class users {
 

@@ -13,7 +13,6 @@ if($action =='home'){
 
 } elseif ($action=='login') {
 	session_start();
-	require_once('../models/users_db.php');
 	$user = new user();
 
 	if($_POST && !empty($_POST['username']) && !empty($_POST['password'])){
@@ -33,7 +32,7 @@ if($action =='home'){
 			$error_message =  "password does not match";
 			header("location: ../view/home.php");
 		} else{
-			$user = new user();
+			$user = new users();
 			$user->add_user($firstName, $lastName, $userName, $password, $email, $date);
 			header("location: ../view/main.php");
 		}
