@@ -1,3 +1,15 @@
+<?php
+session_start();
+require_once('../models/users_db.php');
+$user = new user();
+
+if($_POST && !empty($_POST['username']) && !empty($_POST['password'])){
+	$response = $user->validate_user($_POST['username'], $_POST['password']);
+
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<?php require('header.php'); ?>
@@ -55,6 +67,10 @@
 			<input type = "Submit" value = "Register">
 		</fieldset>
 	</form>
+
+	<?php if(isset($response)){
+		echo "<h4 class='alert'>" . $response ."</h4>";
+	} ?>
 
 	<?php
 		if(!empty($error_message)){?>
