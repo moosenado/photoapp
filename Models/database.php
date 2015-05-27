@@ -1,14 +1,10 @@
 <?php
-
-	$dsn = 'mysql:host=localhost;dbname=photoapp';
-	$username = 'root';
-	$password = '';
-
-?>
-
-<?php
 	class database {
 		private $db;
+
+		private $dsn = 'mysql:host=localhost;dbname=photoapp';
+		private $username = 'root';
+		private $password = '';
 
 		function __contruct(){
 			$this->db = new PDO($dsn, $username, $password);
